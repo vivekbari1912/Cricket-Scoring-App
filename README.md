@@ -2,6 +2,12 @@
 
 A simple, lightweight, and easy-to-use web application for tracking cricket match scores in real-time.
 
+## 🌐 Live Demo
+
+**[👉 Click here to use the app now!](https://kaleidoscopic-rugelach-0aac54.netlify.app/)**
+
+The app is deployed and live on Netlify. No installation needed - just click the link above!
+
 ## ✨ Features
 
 - **Live Score Tracking**: Keep track of runs and wickets in real-time
@@ -47,3 +53,4 @@ Works perfectly on desktop, tablet, and mobile devices.
 ## 📝 License
 
 MIT License - Feel free to use, modify, and share!
+
