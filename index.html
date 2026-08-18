@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cricket Score App</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header class="topbar">
+        <div>
+          <p class="label">Match</p>
+          <h1>Cricket Score</h1>
+        </div>
+        <button id="resetBtn" class="reset-btn">Reset</button>
+      </header>
+
+      <section class="scoreboard">
+        <div class="card runs">
+          <span class="card-label">Runs</span>
+          <strong id="runs">0</strong>
+        </div>
+        <div class="card wickets">
+          <span class="card-label">Wickets</span>
+          <strong id="wickets">0</strong>
+        </div>
+        <div class="card overs">
+          <span class="card-label">Overs</span>
+          <strong id="overs">0.0</strong>
+        </div>
+      </section>
+
+      <section class="panel">
+        <div class="row">
+          <button class="score-btn run-btn" data-points="0">0</button>
+          <button class="score-btn run-btn" data-points="1">1</button>
+          <button class="score-btn run-btn" data-points="2">2</button>
+          <button class="score-btn run-btn" data-points="3">3</button>
+          <button class="score-btn run-btn" data-points="4">4</button>
+          <button class="score-btn run-btn" data-points="6">6</button>
+        </div>
+
+        <div class="row extras">
+          <button class="score-btn extra-btn" data-points="1" data-extra="wide">Wide +1</button>
+          <button class="score-btn extra-btn" data-points="1" data-extra="no-ball">No Ball +1</button>
+          <button class="score-btn extra-btn" data-points="2" data-extra="bye">Bye +2</button>
+          <button class="score-btn extra-btn" data-points="5" data-extra="five">5 Runs</button>
+          <button class="score-btn extra-btn" data-points="3" data-extra="leg-bye">Leg Bye +3</button>
+        </div>
+
+        <div class="row actions">
+          <button id="wicketBtn" class="score-btn wicket-btn">Wicket</button>
+          <button id="dotBallBtn" class="score-btn neutral-btn">Dot Ball</button>
+          <button id="undoBtn" class="score-btn neutral-btn">Undo</button>
+        </div>
+      </section>
+
+      <section class="summary">
+        <h2>Live Summary</h2>
+        <p id="summaryText">0/0 in 0.0 overs</p>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

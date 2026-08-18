@@ -1,0 +1,186 @@
+:root {
+  --bg: #0b1020;
+  --panel: #121a2b;
+  --card: #18253d;
+  --primary: #3ecf8e;
+  --accent: #ffd166;
+  --danger: #ef476f;
+  --text: #edf6ff;
+  --muted: #a8b6d4;
+  --button: #22314d;
+  --shadow: rgba(0, 0, 0, 0.25);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(135deg, #050b16, var(--bg));
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--text);
+}
+
+.app {
+  width: min(92vw, 760px);
+  background: rgba(18, 26, 43, 0.98);
+  border: 1px solid rgba(168, 182, 212, 0.12);
+  border-radius: 22px;
+  box-shadow: 0 24px 50px var(--shadow);
+  padding: 22px;
+}
+
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 22px;
+}
+
+.label {
+  margin: 0 0 4px;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.72rem;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(1.7rem, 4vw, 2.6rem);
+}
+
+.reset-btn {
+  background: var(--danger);
+  border: none;
+  color: white;
+  border-radius: 10px;
+  padding: 10px 16px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.scoreboard {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin-bottom: 22px;
+}
+
+.card {
+  background: var(--card);
+  border-radius: 16px;
+  padding: 18px 14px;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.card-label {
+  display: block;
+  font-size: 0.8rem;
+  color: var(--muted);
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.card strong {
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+}
+
+.panel {
+  background: rgba(17, 24, 39, 0.9);
+  border-radius: 18px;
+  padding: 18px;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.row.extras {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
+.row.actions {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.score-btn {
+  border: none;
+  border-radius: 12px;
+  color: white;
+  padding: 14px 10px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.15s ease, filter 0.15s ease;
+}
+
+.score-btn:hover {
+  filter: brightness(1.1);
+}
+
+.score-btn:active {
+  transform: scale(0.98);
+}
+
+.run-btn {
+  background: var(--primary);
+  color: #062b1d;
+}
+
+.extra-btn {
+  background: var(--accent);
+  color: #322400;
+}
+
+.wicket-btn {
+  background: var(--danger);
+}
+
+.neutral-btn {
+  background: var(--button);
+}
+
+.summary {
+  margin-top: 22px;
+  background: var(--card);
+  border-radius: 16px;
+  padding: 18px 20px;
+}
+
+.summary h2 {
+  margin: 0 0 8px;
+  font-size: 1.1rem;
+}
+
+.summary p {
+  margin: 0;
+  color: var(--text);
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+@media (max-width: 600px) {
+  .scoreboard {
+    grid-template-columns: 1fr;
+  }
+
+  .row {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .row.extras,
+  .row.actions {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
